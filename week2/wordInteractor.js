@@ -21,11 +21,13 @@ const spanify = (arr)=>{
 	return output;
 }
 const handleHover = (el)=>{
-	console.log(el.innerHTML);
-	if ((el.innerHTML.length === text[0].length) && (el.style.color !== 'green')){
+	if (el.style.color === 'green' || el.style.color === 'lightgrey') return;
+	if (el.innerHTML.length === text[0].length){
 		el.innerHTML = text[0];
 		el.style.color = 'green';
 		text.shift();
+	} else{
+		el.style.color = 'lightgrey';
 	}
 }
 
