@@ -7,24 +7,21 @@ function preload(){
 }
 */
 
-function setup(){
-	noCanvas();
-	/*
+function setup() {
+  noCanvas();
+  /*
 	let button = select('#load');
 	button.mousePressed(handleLoad);
 	*/
-	createFileInput(onLoad);
+  createFileInput(onLoad);
 }
 
-function handleLoad(){
-	loadStrings('testfile.txt' , onLoad);
-	// callback for loadStrings fires when file has finished loading, with the data from the loadString fed to it
-
+function handleLoad() {
+  loadStrings('testfile.txt', onLoad);
+  // callback for loadStrings fires when file has finished loading, with the data from the loadString fed to it
 }
 
-
-function onLoad(e){
-	createP(e.name);
-	createP(e.data);
+function onLoad(e) {
+  createP(e.name);
+  createP(e.data);
 }
-
